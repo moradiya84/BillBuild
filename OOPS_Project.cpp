@@ -43,13 +43,13 @@ void shopping :: menu()
 	switch (choice)
 	{
 		case 1 :
-			cout << "\n PLease login \n" ;
+			cout << "\n Please login \n" ;
 			cout << " Enter Email :\t" ;
 			cin >> email ;
 			cout << "\n Enter Password :\t" ;
 			cin >> password ;
 			
-			if((email == "admin@email.com") && (password == "omesh"))
+			if((email == "admin@supermarket.com") && (password == "moradiya84"))
 			{
 				administrator() ;
 			}
