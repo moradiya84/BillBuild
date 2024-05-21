@@ -22,6 +22,8 @@ class shopping
 
 void shopping :: menu()
 {
+	m :
+	
 	int choice ;
 	string email ;
 	string password ;
@@ -81,7 +83,9 @@ void shopping :: menu()
 }
 
 void shopping :: administrator()
-{	
+{
+	m :
+	
 	int choice ;
 	cout << "\n ---------------------------------------------------------------\n\n" ;
 	cout << "\t\t	Administrator Menu" ;
@@ -120,6 +124,8 @@ void shopping :: administrator()
 
 void shopping :: customer()
 {
+	m :
+	
 	int choice ;
 	cout << "\n ---------------------------------------------------------------\n\n" ;
 	cout << "\t\t	Customer Menu" ;
@@ -148,6 +154,8 @@ void shopping :: customer()
 
 void shopping :: add()
 {
+	m :
+	
 	fstream data ;
 	int c ;
 	int token = 0 ;
@@ -340,7 +348,9 @@ void shopping :: list()
 
 
 void shopping :: receipt()
-{	
+{
+	m :
+		
 	fstream data ;
 	
 	int arrc [100] ; // array of codes
