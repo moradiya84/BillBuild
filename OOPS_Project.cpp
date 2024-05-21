@@ -371,7 +371,6 @@ void shopping :: receipt()
 		cout << "\n ---------------------------------------------------------------\n\n" ;
 		cout << "\t\t Empty File !" ;
 		cout << "\n\n ---------------------------------------------------------------\n\n" ;
-		//data.close() ;
 	}
 	
 	else
@@ -408,44 +407,31 @@ void shopping :: receipt()
 			cout << "\n ---------------------------------------------------------------\n\n" ;
 			cout << "\t Do you want to buy another product ?\n\t Press 'y' if yes, else 'n' for no :\t" ;
 			cin >> choice ;
-			//cout << c ;
 		}
 		while(choice == 'y' || choice == 'Y') ;
 		
 		cout << "\n\n\t\t\t_________________________RECEIPT_________________________\n" ;
 		cout << "\nProduct No\tProduct Name\tProduct Quantity\tPrice\tAmount\tAmount With Discount\n" ;
 		cout << "\n\t____________________________________________________________________________________\n\n" ;
-		// c=0 ;
-		//cout << c ;
 		for(int i = 0 ; i < c ; i++)
 		{
-			//cout << "Testing 1" ;
 			data.open("Stocks.txt", ios :: in) ;
 			data >> pcode >> pname >> price >> dis ;
-			//cout << "Testing 2" ;
-			//cout << pcode ;
 			while(! data.eof())
 			{
-				//cout <<"Testing 4" ;
 				if(pcode == arrc[i])
 				{
-					//cout << "Testing 7" ;
 					amount = price * arrq[i] ;
 					dis = amount - (amount * dis / 100) ;
 					total += dis ;
 					
-					//cout<<"Testing 3 " ;
 					cout << "\n" << pcode << "\t\t" << pname << "\t\t" << arrq[i] << "\t\t" << price << "\t\t" << amount << "\t\t" << dis ;
 				}
-				
-				//cout <<"Testing 5" ;
 				data >> pcode >> pname >> price >> dis ;
-				
+
 				data.close() ;
 			}
 		}
-		//cout<<"Testing 6" ;
-		//data.close() ;
 	}
 	cout << "\n\t____________________________________________________________________________________\n\n" ;
 	cout << "\n Total Amount :\t" << total ;
